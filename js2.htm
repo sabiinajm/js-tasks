@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vahid m | task2</title>
+</head>
+<body>
+    <input type="text" id="inp" />
+    <button onclick="show()">Ok</button>
+    <span id="result"></span>
+    <script>
+        const inp = document.getElementById('inp')
+        const result = document.getElementById('result')
+
+        function show(){
+            let kod = '1'
+            for(let i = 1 + Number(inp.value) ; i < 100; i += Number(inp.value)){
+                kod += ',' + i
+            }
+            result.innerHTML = kod
+        }
+    
+    </script>
+</body>
+</html>

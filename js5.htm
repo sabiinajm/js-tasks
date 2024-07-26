@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xezer | task </title>
+</head>
+<body>
+    <h3>fibonachi</h3>
+    <input type="text" id="inp"/>
+    <button onclick="show()">Ok</button>
+    <p id="result"></p>
+
+    <script>
+        const inp = document.getElementById('inp')
+        const result = document.getElementById('result')
+
+        function show(){
+            let inpval = Number(inp.value)
+            let kod = ''
+            let val = [0, 1]
+            for(let i = 2; i < inpval; i++){
+                val[i] = val[i - 1] + val[i - 2]
+            }
+            for(let i = 2; i < inpval; i++){
+                kod += `fibonachi: ${val[i]} <br/>` 
+            }
+            result.innerHTML = kod 
+        }
+    </script>
+</body>
+</html>

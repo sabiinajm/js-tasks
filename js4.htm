@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vahid m | task2</title>
+    <style>
+        table{
+            margin-top: 10px;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        tr,td{border: 1px solid red;}
+        td{ padding: 30px;}
+    </style>
+</head>
+<body>
+    <input type="text" id="inp" />
+    <button onclick="show()">Ok</button>
+    <table>
+        <tr id="row"></tr>
+    </table>
+    <script>
+        const inp = document.getElementById('inp')
+        const row = document.getElementById('row')
+        function show(){
+            kod = ''
+            for(let i = Number(inp.value); i >= 1; i--){
+                kod += `<td>${i}</td>`
+            }
+            row.innerHTML = kod
+        }
+    </script>
+</body>
+</html>

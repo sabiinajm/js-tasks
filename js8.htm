@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xezer | task</title>
+</head>
+<body>
+    <h3>verilen eddedin reqemlerinin cemini tap</h3>
+    <input type="text" id="inp" />
+    <button onclick="show()">tap</button>
+    <span id="result"></span>
+    <script>
+        const result = document.getElementById('result')
+        const inp = document.getElementById('inp')
+        function show(){
+            let kod = 0
+            for(let i = 0; i < inp.value.length ; i++){
+                kod += parseInt(inp.value[i])
+            }
+            result.innerHTML = kod
+        }
+    </script>
+</body>
+</html>

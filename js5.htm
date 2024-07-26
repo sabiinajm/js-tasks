@@ -22,7 +22,7 @@
             for(let i = 2; i < inpval; i++){
                 val[i] = val[i - 1] + val[i - 2]
             }
-            for(let i = 2; i < inpval; i++){
+            for(let i = 0; i < inpval; i++){
                 kod += `fibonachi: ${val[i]} <br/>` 
             }
             result.innerHTML = kod 

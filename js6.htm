@@ -14,15 +14,13 @@
         function show(){
             let kod = ''
             for(let i = 0; i <= 50 ; i++){
-                var notPrime = false;
-                for (var j = 2; j <= i; j++) {
-                    if (i % j == 0 && j !== i) {
-                        notPrime = true;
+                    let qismet = 0
+                for (var j = 1; j <= i; j++) {
+                    if (i % 1 == 0 && i % j == 0) {
+                        qismet++
                     }
                 }
-                if (notPrime == false) {
-                    kod+= ' ' + i
-                }
+                if(qismet == 2) kod += `<br /> ${i}`
             result.innerHTML = kod
             }
         }
